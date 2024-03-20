@@ -12,7 +12,12 @@ POST {{task-api-url}}/token/{{task}}
   "apikey": "{{api-key}}"
 }
 
-> {% client.global.set("token", response.body.token); %}
+> {%
+    var token = JSON.parse(response.body).token;
+    client.global.set("token", token);
+    client.assert(!!token, "Token is not defined or null");
+    console.log("Received token: " + token);
+ %}
 
 ### Get task description
 GET {{task-api-url}}/task/{{token}}
