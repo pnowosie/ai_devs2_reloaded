@@ -13,10 +13,13 @@ POST {{task-api-url}}/token/{{task}}
 }
 
 > {%
-    var token = JSON.parse(response.body).token;
+    var token = response.body.token;
+    if (!token) {
+        token = JSON.parse(response.body).token;
+    }
+    console.log("Received token: " + token);
     client.global.set("token", token);
     client.assert(!!token, "Token is not defined or null");
-    console.log("Received token: " + token);
  %}
 
 ### Get task description
