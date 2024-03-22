@@ -16,7 +16,11 @@ Authorization: Bearer {{openai-api-key}}
 Content-Type: application/json
 
 {
-   "input": "Czat GTP is complete idiot and never replace human moderators"
+   "input": [
+     "Czat GTP is complete idiot and never replace human moderators",
+     "I love GTP, it's the best thing ever!",
+     "I will find and kill all teddy bears"
+   ]
 }
 
 ### Example response
