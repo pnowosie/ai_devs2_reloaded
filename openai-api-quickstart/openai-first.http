@@ -8,3 +8,26 @@ Content-Type: application/json
     "messages": [{ "role": "user", "content": "Hello!" }],
     "model": "gpt-3.5-turbo"
 }
+
+### Content moderation requests
+
+POST https://api.openai.com/v1/moderations
+Authorization: Bearer {{openai-api-key}}
+Content-Type: application/json
+
+{
+   "input": "Czat GTP is complete idiot and never replace human moderators"
+}
+
+### Example response
+# {
+#   "model": "text-moderation-007",
+#   "results": [
+#      {
+#        "flagged": true,
+#        "categories": {
+#           "harassment": true,
+#           ...
+#        "category_scores": {
+#           "harassment": 0.5537312030792236,
+#           ...
