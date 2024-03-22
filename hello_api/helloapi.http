@@ -9,7 +9,7 @@
 POST {{task-api-url}}/token/{{task}}
 
 {
-  "apikey": "{{api-key}}"
+  "apikey": "{{task-api-key}}"
 }
 
 > {%

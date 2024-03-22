@@ -4,4 +4,4 @@
 
 
 helloapi:
-	ijhttp -e aidev -v ./http-client.env.json -p ./http-client.private.env.json ./hello_api/helloapi.http
+	ijhttp -e aidev -p ./http-client.private.env.json ./hello_api/helloapi.http

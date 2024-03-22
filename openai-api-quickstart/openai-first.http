@@ -1,0 +1,10 @@
+### OpenAI expample API call
+
+POST https://api.openai.com/v1/chat/completions
+Authorization: Bearer {{openai-api-key}}
+Content-Type: application/json
+
+{
+    "messages": [{ "role": "user", "content": "Hello!" }],
+    "model": "gpt-3.5-turbo"
+}

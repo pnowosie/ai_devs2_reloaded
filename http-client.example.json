@@ -1,0 +1,7 @@
+{
+    "aidev": {
+       "task-api-url": "URL to the task API: ...aidevs.pl",
+       "task-api-key": "task API key: 00000000-0000-...",
+       "openai-api-key": "OpenAI API key: sk-xxx..."
+    }    
+}
